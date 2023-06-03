@@ -36,6 +36,7 @@ class PostController extends Controller
     {
         // $data = array_merge($request->all(), ['image' => '']);
         Posts::create($request->validated());
+        return to_route('post.index');
     }
 
     /**
@@ -43,7 +44,7 @@ class PostController extends Controller
      */
     public function show(Posts $post)
     {
-        //
+        return view('dashboard.post.show', compact('post'));
     }
 
     /**
@@ -61,13 +62,15 @@ class PostController extends Controller
     public function update(PutRequest $request, Posts $post)
     {
         $post->update($request->validated());
+        return to_route('post.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Posts $posts)
+    public function destroy(Posts $post)
     {
-        echo 'destroy';
+        $post->delete();
+        return to_route('post.index');
     }
 }

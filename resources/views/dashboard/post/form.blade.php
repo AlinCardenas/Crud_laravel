@@ -9,7 +9,7 @@
 <select name="category_id" >
     <option value=""></option>
     @foreach ($categories as $title => $id)
-        <option "{{ old("category_id","$post->category_id") == $id ? 'selected' :''}}" value="{{$id}}">{{$title}} </option>
+        <option {{ old("category_id", $post->category_id) == $id ? 'selected' : '' }} value="{{ $id }}">{{ $title }}</option>
     @endforeach
 </select>
 
