@@ -18,7 +18,7 @@
                 <tr>
                     <td>{{$post->id}}</td>
                     <td>{{$post->title}}</td>
-                    <td>{{-- {{$post->category}} --}}</td>
+                    <td>{{$post->category->title}}</td>
                     <td>{{$post->posted}}</td>
                     <td>
                         <a href="{{route('post.show',$post)}}">Ver</a>

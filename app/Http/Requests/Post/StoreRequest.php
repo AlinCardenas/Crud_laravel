@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Post;
 
+use App\Models\Category;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Str;
 class StoreRequest extends FormRequest
@@ -37,5 +38,6 @@ class StoreRequest extends FormRequest
             "posted" => "required",
             "image" => "required|mimes:jpeg,jpg,png|max:10240"
         ];
+
     }
 }
