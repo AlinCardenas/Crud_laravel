@@ -26,5 +26,8 @@
 <label for="description">description</label>
 <textarea name="description" >{{old('description',$post->description)}}</textarea>
 
+<label for="image">Imagen</label>
+<input type="file" name="image" >
+
 <button type="submit">Enviar</button>
     

@@ -34,6 +34,11 @@ class PostController extends Controller
      */
     public function store(StoreRequest $request)
     {
+        $data = $request->validated();
+        if( isset($data['image'])){
+            $data['image'] = $filename = time().".".$data['image']->extension();
+            $request->image->move(public_path('image'),$filename);
+        }
         // $data = array_merge($request->all(), ['image' => '']);
         Posts::create($request->validated());
         return to_route('post.index')->with('status','Registro creado');
@@ -61,7 +66,12 @@ class PostController extends Controller
      */
     public function update(PutRequest $request, Posts $post)
     {
-        $post->update($request->validated());
+        $data = $request->validated();
+        if( isset($data['image'])){
+            $data['image'] = $filename = time().".".$data['image']->extension();
+            $request->image->move(public_path('image'),$filename);
+        }
+        $post->update($data);
         return to_route('post.index')->with('status','Registro actualizado');
     }
 
