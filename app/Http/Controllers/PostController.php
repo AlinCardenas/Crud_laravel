@@ -36,7 +36,7 @@ class PostController extends Controller
     {
         // $data = array_merge($request->all(), ['image' => '']);
         Posts::create($request->validated());
-        return to_route('post.index');
+        return to_route('post.index')->with('status','Registro creado');
     }
 
     /**
@@ -62,7 +62,7 @@ class PostController extends Controller
     public function update(PutRequest $request, Posts $post)
     {
         $post->update($request->validated());
-        return to_route('post.index');
+        return to_route('post.index')->with('status','Registro actualizado');
     }
 
     /**
@@ -71,6 +71,6 @@ class PostController extends Controller
     public function destroy(Posts $post)
     {
         $post->delete();
-        return to_route('post.index');
+        return to_route('post.index')->with('status','Registro eliminado');
     }
 }

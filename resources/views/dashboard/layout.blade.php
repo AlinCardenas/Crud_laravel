@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
+    @if (session('status'))
+        {{session('status')}}
+    @endif
     @yield('content')
+    
 </body>
 </html>
