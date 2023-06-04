@@ -1,7 +1,7 @@
 @extends('dashboard.layout')
 
 @section('content')
-    <h1>Index</h1>
+    <h1>Listado completo</h1>
     <a href="{{route('post.create')}}">Crear</a>
     <table>
         <thead>
