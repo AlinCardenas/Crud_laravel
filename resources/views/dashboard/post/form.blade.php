@@ -2,8 +2,8 @@
 <label for="title">Titulo</label>
 <input type="text" name="title" value="{{old('title',$post->title)}}">
 
-{{-- <label for="slug">Slug</label>
-<input type="text" name="slug" > --}}
+<label for="slug">Slug</label>
+<input type="text" name="slug" value={{old('slug',$post->slug)}} >
 
 <label for="">Categoria</label>
 <select name="category_id" >
