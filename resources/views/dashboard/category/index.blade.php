@@ -3,7 +3,7 @@
 @section('content')
     <h1>Lisado de categorias</h1>
     <a href="{{route('category.create')}}">Crear</a>
-    <table>
+    <table class="table">
         <thead>
             <tr>
                 <th>Title</th>

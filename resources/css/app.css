@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.table {
+    @apply table-auto w-full
+}
+
+.table th {
+    @apply px-6 py-2 bg-gray-50 font-medium text-gray-500 uppercase tracking-wider border leading-5 tracking-widest
+}
+
+.table tr {
+    @apply border  
+}
+.table td{
+    @apply px-6 py-4 whitespace-normal text-center
+}
+
+/* .table td {
+    @apply px-6 py-4 whitespace-no-wrap border-b text-sm leading-5 text-gray-500;
+} */

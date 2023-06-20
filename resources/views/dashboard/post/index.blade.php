@@ -3,7 +3,7 @@
 @section('content')
     <h1>Listado completo</h1>
     <a href="{{route('post.create')}}">Crear</a>
-    <table>
+    <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
