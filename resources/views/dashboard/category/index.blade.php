@@ -1,8 +1,9 @@
 @extends('dashboard.layout')
 
 @section('content')
-    <h1>Lisado de categorias</h1>
-    <a href="{{route('category.create')}}">Crear</a>
+    <div class="mt-4">
+        <a class="btn btn-primary my-3" href="{{route('category.create')}}">Crear</a>
+    </div>
     <table class="table">
         <thead>
             <tr>
@@ -17,12 +18,12 @@
                     <td>{{$category->title}}</td>
                     <td>{{$category->slug }}</td>
                     <td>
-                        <a href="{{route('category.show',$category)}}">ver</a>
-                        <a href="{{route('category.edit',$category)}}">editar</a>
+                        <a class="my-2 btn btn-success" href="{{route('category.edit',$category)}}">Editar</a>
+                        <a class="my-2 btn  btn-warning" href="{{route('category.show',$category)}}">Ver</a>
                         <form action="{{route('category.destroy', $category)}}" method="post">
                             @csrf
                             @method('delete')
-                            <button type="submit">Borrar</button>
+                            <button class="mt-2  btn btn-danger" type="submit">Borrar</button>
                         </form>
                     </td>
                 </tr>

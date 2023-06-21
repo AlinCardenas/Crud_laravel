@@ -1,8 +1,9 @@
 @extends('dashboard.layout')
 
 @section('content')
-    <h1>Listado completo</h1>
-    <a href="{{route('post.create')}}">Crear</a>
+    <div class="mt-4">
+        <a class="btn btn-primary"  href="{{route('post.create')}}">Crear</a>
+    </div>
     <table class="table">
         <thead>
             <tr>
@@ -21,12 +22,12 @@
                     <td>{{$post->category->title}}</td>
                     <td>{{$post->posted}}</td>
                     <td>
-                        <a href="{{route('post.show',$post)}}">Ver</a>
-                        <a href="{{route('post.edit',$post)}}">Editar</a>
+                        <a class="btn btn-success my-2"  href="{{route('post.edit',$post)}}">Editar</a>
+                        <a class="btn btn-warning my-2"  href="{{route('post.show',$post)}}">Ver</a>
                         <form action="{{route('post.destroy',$post)}}" method="post">
                             @method('delete')
                             @csrf
-                            <button type="submit">Eliminar</button>
+                            <button class="btn btn-danger my-2" type="submit">Eliminar</button>
                         </form>
                     </td>
                 </tr>
