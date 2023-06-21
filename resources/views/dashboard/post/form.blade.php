@@ -29,5 +29,5 @@
 <label for="image">Imagen</label>
 <input type="file" name="image" >
 
-<button class="btn"  type="submit">Enviar</button>
+<button class="btn btn-success"  type="submit">Enviar</button>
     

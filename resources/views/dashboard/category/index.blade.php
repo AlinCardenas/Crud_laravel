@@ -1,9 +1,7 @@
 @extends('dashboard.layout')
 
 @section('content')
-    <div class="mt-4">
-        <a class="btn btn-primary my-3" href="{{route('category.create')}}">Crear</a>
-    </div>
+<a class="btn btn-primary my-3" href="{{route('category.create')}}">Crear</a>
     <table class="table">
         <thead>
             <tr>

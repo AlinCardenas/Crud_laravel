@@ -19,7 +19,7 @@
 
 /* Formulario */
 .form-control {
-    @apply block rounded-sm shadow-sm w-full inline-block
+    @apply block rounded-sm shadow-sm w-full inline-block bg-slate-50
 }
 /* Botones */
 .btn {
@@ -36,4 +36,17 @@
 }
 .btn-warning {
     @apply  bg-yellow-500 hover:bg-yellow-700 border-yellow-500 hover:border-yellow-700
+}
+
+.card{
+    @apply p-6 rounded shadow-sm
+}
+.card-white{
+    @apply bg-white
+}
+h1 {
+    @apply text-4xl font-bold mb-3
+}
+label{
+    @apply mb-2 block
 }

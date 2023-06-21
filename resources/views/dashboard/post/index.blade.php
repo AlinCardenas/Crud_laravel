@@ -1,9 +1,7 @@
 @extends('dashboard.layout')
 
 @section('content')
-    <div class="mt-4">
-        <a class="btn btn-primary"  href="{{route('post.create')}}">Crear</a>
-    </div>
+<a class="btn btn-primary"  href="{{route('post.create')}}">Crear</a>  
     <table class="table">
         <thead>
             <tr>
@@ -33,7 +31,6 @@
                 </tr>
                 
             @endforeach
-
         </tbody>
     </table>
     {{$posts->links()}}
