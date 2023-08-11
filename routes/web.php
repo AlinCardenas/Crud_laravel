@@ -39,12 +39,18 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'admin']], funct
     /* Route::resource('post', PostController::class);
     Route::resource('category', CategoryController::class); */
 });
+Route::group(['prefix' => 'blog'], function () {
+    Route::controller(BlogController::class)->group(function(){
+        Route::get('/', 'index')->name('web.blog.index');
+        Route::get('/{post}', 'show')->name('web.blog.show');
+    });
+});
 
 
-Route::group(['prefix' => 'blog'])->group(function(){
+/* Route::group(['prefix' => 'blog'])->group(function(){
     Route::controller(BlogController::class)->group(function(){
         Route::get('/', 'index')->name('blog.index');
     });
-});
+}); */
 
 require __DIR__.'/auth.php';
